@@ -1,0 +1,81 @@
+.game-grid {
+  border: 2px solid #000;
+  background-color:rgb(64, 79, 100) 11.2%;
+}
+#container {
+  position: relative;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  cursor: pointer;
+  background-color: #62727e;
+}
+
+.cell:hover:not(.circle):not(.cross){
+  background-color: #777f87;
+}
+
+.circle {
+  color: #2196f3;
+  cursor:not-allowed;
+}
+
+.cross {
+  color: #f44336;
+  cursor:not-allowed;
+}
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.button {
+  width:150px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #cdd6de;
+}
+
+
+.button:disabled {
+  background-color: #6a737b;
+  color: black;
+  opacity: 1;
+  cursor: not-allowed;
+}
+@media (max-width: 768px) {
+  .cell {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+  }
+
+  .button {
+    width: 120px;
+    height:40px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
